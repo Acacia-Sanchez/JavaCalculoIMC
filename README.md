@@ -12,4 +12,4 @@ Luego, a partir del IMC obtenido se pueden calcular si una persona tiene un peso
 
 Para generar estos resultados el IMC calculado debe estar en los rangos de la siguiente tabla:
 
-![TablaIMC](src\main\resources\assets\TablaIMC.png "Tabla IMC")
+![TablaIMC](src/main/resources/assets/TablaIMC.png "Tabla IMC")
