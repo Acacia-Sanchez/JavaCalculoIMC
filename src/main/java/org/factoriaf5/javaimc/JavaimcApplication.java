@@ -2,42 +2,28 @@ package org.factoriaf5.javaimc;
 
 public class JavaimcApplication {
 
-	public static void main(String[] args) {
+	public String calculoIMC(double weight, double height) {
 
-		double weight = 29;
-		double height = 1.55;
-		double imc;
+		double imc = weight / Math.pow(height, 2);
 
-		imc = weight / height;
-		System.out.println(imc);
-
-		int imcRedondeado = (int) Math.round(imc); // redondea el entero más cercano
-		System.out.println(imcRedondeado);
-
-		if (imcRedondeado < 16) {
-			String tabla1 = "Delgadez severa";
-			System.out.println(tabla1);
-		} else if (imcRedondeado == 16 || imcRedondeado < 17) {
-			String tabla2 = "Delgadez moderada";
-			System.out.println(tabla2);
-		} else if (imcRedondeado == 17 || imcRedondeado < 18.5) {
-			String tabla3 = "Delgadez leve";
-			System.out.println(tabla3);
-		} else if (imcRedondeado == 18.5 || imcRedondeado < 25) {
-			String tabla4 = "Peso normal";
-			System.out.println(tabla4);
-		} else if (imcRedondeado == 25 || imcRedondeado < 30) {
-			String tabla5 = "Sobrepeso";
-			System.out.println(tabla5);
-		} else if (imcRedondeado == 30 || imcRedondeado < 35) {
-			String tabla6 = "Obesidad leve";
-			System.out.println(tabla6);
-		} else if (imcRedondeado == 35 || imcRedondeado < 40) {
-			String tabla7 = "Obesidad moderada";
-			System.out.println(tabla7);
+		if (imc < 16) {
+			return "Delgadez severa";
+		} else if (imc < 17) {
+			return "Delgadez moderada";
+		} else if (imc < 18.5) {
+			return "Delgadez leve";
+		} else if (imc < 25) {
+			return "Peso normal";
+		} else if (imc < 30) {
+			return "Sobrepeso";
+		} else if (imc < 35) {
+			return "Obesidad leve";
+		} else if (imc < 40) {
+			return "Obesidad moderada";
+		} else if (imc > 40) {
+			return "Obesidad mórbida";
 		} else {
-			String tabla8 = "Obesidad mórbida";
-			System.out.println(tabla8);
+			return "Estás fuera de rango";
 		}
 
 	}
